@@ -6,7 +6,7 @@ import numpy as np
 #from breaker import predict
 from keras.models import load_model
 
-model = load_model('predict.h5')
+model = load_model('predictII.h5')
 
 #model.summary()
 #model.get_weights()
@@ -20,7 +20,7 @@ def predict(filepath):
     else:
         print("Not detected");
     res = np.array(model.predict(img[np.newaxis, :, :, np.newaxis]))
-    ans = np.reshape(res, (5, 36))
+    ans = np.reshape(res, (6, 36))
     l_ind = []
     probs = []
     for a in ans:
@@ -40,7 +40,7 @@ print("Predicted Captcha =",predict('./captcha1.png'))
 
 x = 1
 z = 1
-while x<=1:
+while x<=10:
     print("./captcha%d.png" % (z), predict('./captcha%d.png' % (z))+'.png')
     x+=1
     z+=1

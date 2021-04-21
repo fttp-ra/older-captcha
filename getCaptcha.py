@@ -7,10 +7,10 @@ from selenium.webdriver.common.keys import Keys
 
 x = 1
 
-while x <= 1:
+while x <= 10:
 
     #browser = webdriver.Chrome(ChromeDriverManager().install())
-    browser = webdriver.Chrome(executable_path=r"/home/rhino/opt/chromedriver")
+    browser = webdriver.Chrome(executable_path=r"C:/Users/luxci/Downloads/chromedriver_win32/chromedriver")
 
     browser.get('http://contribuyente.seniat.gob.ve/BuscaRif/BuscaRif.jsp')
 
