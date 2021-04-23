@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 
 x = 1
 
-while x <= 10:
+while x <= 1:
 
     #browser = webdriver.Chrome(ChromeDriverManager().install())
     browser = webdriver.Chrome(executable_path=r"C:/Users/luxci/Downloads/chromedriver_win32/chromedriver")
@@ -26,6 +26,6 @@ while x <= 10:
 
     time.sleep(1)
 
-    browser.close()
+    #browser.close()
 
     x+=1
