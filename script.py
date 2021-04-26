@@ -1,5 +1,6 @@
 import os
 import cv2
+import json
 import keras
 import string
 import numpy as np
@@ -32,11 +33,10 @@ def predict(filepath):
         capt += symbols[l]
     return capt#, sum(probs) / 5
 
-# replace print for os.rename
+# Lets Predict By Model
+text = predict('./captcha1.png')
+print("Predicted Captcha =",predict('./captcha1.png'))
 
-x = 1
-z = 1
-while x<=10:
-    print("./captcha%d.png" % (z), predict('./captcha%d.png' % (z))+'.png')
-    x+=1
-    z+=1
+#save text into captcha.json
+with open('captcha.json', 'w') as f:
+    json.dump(text, f)
